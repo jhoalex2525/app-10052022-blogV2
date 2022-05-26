@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Menu from "./componentes/menu/Menu";
+import Cabecera from "./componentes/cabecera/cabecera";
+import Pie from "./componentes/piedepagina/pie";
+import Contacto from "./componentes/contacto/contacto";
+import Contenedor from "./componentes/contenedor/contenedor";
 
-function App() {
+
+function Principal() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Menu/>
+      <div className="w3-main" style={{marginLeft:"300px"}}>
+        <Cabecera/>
+        <Contenedor/>
+        <Contacto/>
+        <Pie/>
+      </div>
+    </>
+
   );
 }
 
-export default App;
+export default Principal;
